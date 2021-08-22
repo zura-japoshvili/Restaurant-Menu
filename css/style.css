@@ -1,0 +1,96 @@
+body{
+    background-image: url(../img/vintage-lighting-decoration-with-plant-cement-wall.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.our-menu{
+    position: absolute;
+    top: 50px;
+    font-size: 72px;
+    font-family: 'Lobster';
+    color: #137e78;
+    border-bottom: 2px solid #31363d;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+.our-menu:hover{
+    border-bottom: 1px solid #137e78;
+    color: #0f4240;
+}
+
+.btn-cont{
+    margin-top: 200px;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn-cont p{
+    cursor: pointer;
+    padding: 5px 18px;
+    border: 1px solid #31363d;
+    border-radius: 8px;
+    font-family: 'Lobster';
+    background-color: #0ef5e942;
+    transition-duration: 0.5s;
+}
+.btn-cont p:hover{
+    background-color: #137e78;
+}
+.menu-cont {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.menu-item{
+    width: 600px;
+    height: 200px;
+    display: flex;
+    background-color: #747474cc;
+    margin-bottom: 15px;
+}
+.photo{
+    border: 2px solid #0f4240;
+    border-radius: 5px;
+    width: 45%;
+}
+.item-info{
+    margin: 0 5px;
+    width: fit-content;
+}
+.np{
+    display: flex;
+    border-bottom:  1px solid rgb(15, 34, 58);
+    margin-bottom: 5px;
+}
+.np h4{
+    font-size: 22px;
+    font-family: 'Lobster';
+    color: #863545;
+}
+.price{
+    margin-left: 10px;
+    color: #645919 !important;
+}
+.item-text{
+    color: #31363d;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1250px) {
+    .menu-item{
+        width: 500px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .menu-item{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .menu-item{
+        width: 300px;
+    }
+}

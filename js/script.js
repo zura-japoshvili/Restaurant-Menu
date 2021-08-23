@@ -65,40 +65,33 @@ const menu = [
     },
   ];
 
-addEventListener("DOMContentLoaded",function(){
-    createItemsFunc();
+window.addEventListener("DOMContentLoaded",function(){
+    createItemsFunc(menu);
     displayAll();
 });
-
+const menu_cont = document.querySelector(".menu-cont");
 let all_Item;
 
-function createItemsFunc(){
-    const menu_cont = document.querySelector(".menu-cont");
-    for(let i = 0; i<menu.length;i++){
-        const menu_item = document.createElement("div");
-        menu_cont.appendChild(menu_item);
-        menu_item.classList.add("menu-item",menu[i].category);
-        const img = document.createElement("img");
-        img.classList.add("photo");
-        menu_item.appendChild(img);
-        img.src = menu[i].img;
-        const page_info = document.createElement("div");
-        page_info.classList.add("item-info");
-        menu_item.appendChild(page_info);
-        const np = document.createElement("div");
-        np.classList.add("np");
-        page_info.appendChild(np);
-        const name = document.createElement("h4");
-        const price = document.createElement("h4");
-        name.textContent = menu[i].title;
-        price.textContent = menu[i].price;
-        price.classList.add("price")
-        np.append(name,price);
-        const item_text = document.createElement("p");
-        item_text.classList.add("item-text");
-        item_text.textContent = menu[i].desc;
-        page_info.appendChild(item_text);
-    }
+function createItemsFunc(menuItems){
+    let displayMenu = menuItems.map(function (item) {
+        console.log(item);
+    
+        return `<div class="menu-item ${item.category}">
+              <img src=${item.img} alt=${item.title} class="photo" />
+              <div class="item-info">
+                <div class="np">
+                  <h4>${item.title}</h4>
+                  <h4 class="price">$${item.price}</h4>
+                </div>
+                <p class="item-text">
+                  ${item.desc}
+                </p>
+              </div>
+            </div>`;
+      });
+    displayMenu = displayMenu.join("");
+    console.log(displayMenu);
+    menu_cont.innerHTML = displayMenu;
     all_Item = document.querySelectorAll(".menu-item");
 }
 function displayAll(){

@@ -94,6 +94,7 @@ body{
         width: 300px;
     }
     .btn-cont p{
-        padding: 5px 14px;
+        padding: 3px 12px;
+        font-size: 14px;
     }
 }

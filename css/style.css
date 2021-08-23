@@ -1,6 +1,7 @@
 body{
     background-image: url(../img/vintage-lighting-decoration-with-plant-cement-wall.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,7 +95,13 @@ body{
         width: 300px;
     }
     .btn-cont p{
-        padding: 3px 12px;
+        padding: 4px 12px;
         font-size: 14px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .btn-cont p{
+        padding: 3px 10px;
+        font-size: 12px;
     }
 }
